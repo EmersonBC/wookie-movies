@@ -1,3 +1,15 @@
 <div *ngIf="movies">
-  <p *ngFor="let movie of movies">{{ movie.title }}</p>
+  <div *ngFor="let genre of genres" class="p-4">
+    <h3>{{genre}}</h3>
+
+    <div class="row">
+      <div *ngFor="let movie of movies | genreFilter: genre" class="card col-md-4 col-xl-3 p-0">
+        <img class="card-img-top" src="{{movie.backdrop}}" alt="Art">
+        <!--    <div class="card-body">-->
+        <!--      <h5 class="card-title">{{movie.title}}</h5>-->
+        <!--      <p class="card-text">{{movie.overview}}</p>-->
+        <!--    </div>-->
+      </div>
+    </div>
+  </div>
 </div>

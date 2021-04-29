@@ -10,12 +10,17 @@ import {Movie} from './models/Movie';
 })
 export class MoviesComponent implements OnInit, OnDestroy {
   movies: Movie[] = [];
+  genres: string[] = [];
 
   movies$$: Subscription;
 
   constructor(private moviesService: MoviesService) {
     this.movies$$ = this.moviesService.getMovies().subscribe((movies: Movie[]) => {
       this.movies = movies;
+      this.genres = this.genres.concat(...this.movies.map(movie => movie.genres)).sort();
+
+      // Remove duplicates
+      this.genres = [...new Set(this.genres)];
     });
   }
 

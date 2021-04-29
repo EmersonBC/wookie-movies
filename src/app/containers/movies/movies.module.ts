@@ -4,6 +4,7 @@ import {CommonModule} from '@angular/common';
 import {MoviesComponent} from './movies.component';
 import {MoviesService} from './store/movies.service';
 import {HttpClientModule} from '@angular/common/http';
+import {GenreFilterPipe} from './pipes/genre-filter.pipe';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
 ] as Routes;
 
 @NgModule({
-  declarations: [MoviesComponent],
+  declarations: [MoviesComponent, GenreFilterPipe],
   imports: [
     CommonModule,
     HttpClientModule,
