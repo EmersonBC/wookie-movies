@@ -1,1 +1,20 @@
-<p>movie-details works!</p>
+<div *ngIf="movie" class="row p-md-2">
+  <img class="col-md-4" src="{{movie.poster}}" alt="Poster">
+  <div class="col-md-8">
+    <div class="d-flex justify-content-between row mb-2 m-0">
+      <h2>{{movie.title}} ({{movie.classification}})</h2>
+      <h4 class="d-flex align-items-center">
+        <fa-icon [icon]="faStar"></fa-icon>
+        {{movie.imdb_rating}}/10
+      </h4>
+    </div>
+
+    <div class="row mb-2 m-0">
+      <p>{{movie.released_on | date}} | {{movie.length}} | {{movie.director}}</p>
+    </div>
+
+    <p class="mb-2">Cast: {{movie.cast}}</p>
+
+    <p>{{movie.overview}}</p>
+  </div>
+</div>
