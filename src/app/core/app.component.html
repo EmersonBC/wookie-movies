@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light border-bottom">
+  <a class="navbar-brand text-center h1">WOOKIE <br/> MOVIES</a>
+
+  <form class="form-inline">
+    <button class="btn btn-outline-success mr-2" type="submit">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </button>
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+  </form>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
