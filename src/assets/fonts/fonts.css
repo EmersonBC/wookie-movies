@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Varela;
+  src: url("src/assets/fonts/Varela-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OverpassMono;
+  src: url("src/assets/fonts/OverpassMono-Regular.ttf") format("truetype");
+}

@@ -1,4 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+$font-family-sans-serif: Varela;
+$font-family-monospace: OverpassMono;
 
-/* Importing Bootstrap SCSS file. */
+$primary: #07689F;
+$secondary: #C9D6DF;
+$success: #11D3BC;
+$danger: #F67280;
+$info: #A2D5F2;
+$warning: #FF7E67;
+$light: #FAFAFA;
+$dark: #4e4e4e;
+
 @import '~bootstrap/scss/bootstrap';
