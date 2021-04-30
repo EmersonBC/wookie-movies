@@ -16,6 +16,7 @@ import {Subscription} from 'rxjs';
 export class MoviesComponent implements OnInit, OnDestroy {
   movies!: Movie[];
   genres: string[] = [];
+  isLoading = true;
 
   private movies$$: Subscription;
 
@@ -29,10 +30,12 @@ export class MoviesComponent implements OnInit, OnDestroy {
         this.movies = movies;
 
         this.updateGenres();
+        this.isLoading = false;
       });
 
+    this.isLoading = true;
     this.moviesService
-      .getMovies()
+      .getMovies(history.state?.data?.movieSearch ?? '')
       .subscribe((movies: Movie[]) => this.store.dispatch(getMovies({movies})));
   }
 

@@ -1,11 +1,12 @@
 <nav class="navbar navbar-light bg-primary border-bottom">
   <a class="navbar-brand text-secondary text-center h1 col-12 col-md-2" [routerLink]="['/']">WOOKIE <br/> MOVIES</a>
 
-  <form class="form-inline flex-nowrap col-12 col-md-4 p-0">
+  <form class="form-inline flex-nowrap col-12 col-md-4 p-0" (ngSubmit)="searchMovie()">
     <label class="mr-2" for="search">
       <fa-icon class="text-secondary" [icon]="faSearch"></fa-icon>
     </label>
-    <input id="search" class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+    <input id="search" name="search" class="form-control w-100" type="search" placeholder="Search" aria-label="Search"
+           [(ngModel)]="search">
   </form>
 </nav>
 
