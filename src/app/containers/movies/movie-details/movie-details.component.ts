@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {faStar} from '@fortawesome/free-solid-svg-icons';
+import {faAngleLeft, faStar} from '@fortawesome/free-solid-svg-icons';
 import {Endpoints} from '../../../shared/consts/endpoints';
 import {Movie} from '../models/Movie';
 
@@ -10,6 +10,7 @@ import {Movie} from '../models/Movie';
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
+  faBack = faAngleLeft;
   faStar = faStar;
 
   movie!: Movie;
