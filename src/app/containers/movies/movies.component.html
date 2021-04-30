@@ -5,7 +5,10 @@
     <div class="row">
       <div *ngFor="let movie of movies | genreFilter: genre" class="card col-md-4 col-xl-3 p-0"
            (click)="openDetails(movie)">
-        <img class="card-img-top" src="{{movie.backdrop}}" alt="Art">
+        <img class="card-img-top"
+             alt="Art"
+             [defaultImage]="'/assets/images/placeholder.gif'"
+             [lazyLoad]="movie.backdrop">
       </div>
     </div>
   </div>

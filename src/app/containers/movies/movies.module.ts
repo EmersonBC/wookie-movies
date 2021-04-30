@@ -5,6 +5,7 @@ import {MoviesComponent} from './movies.component';
 import {MoviesService} from './store/movies.service';
 import {HttpClientModule} from '@angular/common/http';
 import {GenreFilterPipe} from './pipes/genre-filter.pipe';
+import {LazyLoadImageModule} from 'ng-lazyload-image';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     HttpClientModule,
+    LazyLoadImageModule,
     RouterModule.forChild(routes)
   ],
   providers: [MoviesService],
