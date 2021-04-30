@@ -3,7 +3,7 @@
     <h3>{{genre}}</h3>
 
     <div class="row">
-      <div *ngFor="let movie of movies | genreFilter: genre" class="card col-md-4 col-xl-3 p-0"
+      <div *ngFor="let movie of movies | genreFilter: genre; trackBy: trackById" class="card col-md-4 col-xl-3 p-0"
            (click)="openDetails(movie)">
         <img class="card-img-top"
              alt="Art"
@@ -23,5 +23,5 @@
 </ng-template>
 
 <ng-template #noResult>
-  <h5>Sorry, no results found for your search.</h5>
+  <h6>Sorry, no results found for your search.</h6>
 </ng-template>

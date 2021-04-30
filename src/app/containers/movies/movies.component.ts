@@ -50,6 +50,10 @@ export class MoviesComponent implements OnInit, OnDestroy {
     this.router.navigate([Endpoints.movies, movie.slug], {state: {data: {movie}}});
   }
 
+  trackById(index: number, item: Movie): string {
+    return item.id;
+  }
+
   private updateGenres(): void {
     this.genres = [];
 
