@@ -11,6 +11,7 @@ import {HttpService} from './services/http-service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
+import {moviesReducer} from '../containers/movies/store/movies.reducer';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,12 @@ import {LazyLoadImageModule} from 'ng-lazyload-image';
     AppRoutingModule,
     MoviesModule,
     MovieDetailsModule,
-    StoreModule.forRoot({}),
     NgbModule,
     FontAwesomeModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    StoreModule.forRoot({
+      movies: moviesReducer,
+    }),
   ],
   providers: [HttpClient, HttpService],
   bootstrap: [AppComponent]
